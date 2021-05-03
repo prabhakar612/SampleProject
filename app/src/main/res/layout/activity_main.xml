@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="java.util.List"/>
+        <import type="com.sampleproject.User"/>
+        <import type="com.sampleproject.Circle"/>
+        <variable
+            name="userList"
+            type="List&lt;User>" />
+        <variable
+            name="circleList"
+            type="List&lt;Circle>" />
+
+        <variable
+            name="listener"
+            type="com.sampleproject.UserClickListener" />
+    </data>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="20dp"
+       android:textSize="16sp"
+       android:text="User"
+       android:gravity="center_vertical|left"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:entries="@{userList}"
+        app:layout="@{@layout/user_layout}"
+        app:listener="@{listener}"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:textSize="16sp"
+        android:text="Circle"
+        android:gravity="center_vertical|left"/>
+    <LinearLayout
+        android:id="@+id/circle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:entries="@{circleList}"
+        app:layout="@{@layout/circle_layout}" />
+
+</LinearLayout>
+</layout>

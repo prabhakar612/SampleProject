@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="android.view.View"/>
+        <import type="com.sampleproject.Circle"/>
+        <variable
+            name="data"
+            type="Circle"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="14dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:text="@{data.name}"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_gravity="bottom"
+            android:background="#FFF0EEED" />
+
+    </LinearLayout>
+</layout>
